@@ -1,0 +1,148 @@
+body {
+  box-sizing: border-box;
+  background-color: #f5f4f6;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+div,
+form,
+main,
+article,
+section,
+h1 {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+input:focus {
+  outline: none;
+}
+
+h1,
+#addnew,
+.tasklist-btn,
+.task-item-text {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #333;
+}
+
+main {
+  margin: 40px auto;
+  width: 100%;
+  max-width: 600px;
+  background-color: #fff;
+  box-shadow: 5px 5px 5px #ccc;
+}
+
+.flex-wrap,
+.tasklist {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-wrap > *,
+.tasklist > * {
+  padding: 10px 20px;
+  border-bottom: 1px solid #eee;
+}
+
+#newtask {
+  position: relative;
+}
+
+#tasklist-main {
+  padding: 0;
+}
+
+#addnew {
+  color: #333;
+  font-style: normal;
+  border: none;
+  width: 90%;
+}
+
+#addnew::placeholder {
+  color: #bbb;
+  font-style: italic;
+  border: none;
+}
+
+.task-group {
+  display: flex;
+  position: relative;
+}
+
+.task-group > * {
+  margin: 0 5px;
+}
+
+.task-group:focus-within {
+  background-color: #ecebb8;
+}
+
+.task-item-text {
+  width: 90%;
+}
+
+.task-item-text,
+.task-item-text::placeholder {
+  color: #333;
+  border: none;
+}
+
+.task-item-text:focus {
+  background-color: #ecebb8;
+}
+
+.task-item-delete {
+  display: none;
+}
+
+.task-item-more,
+.h1-reload,
+.newtask-return,
+.task-item-delete {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  height: 16px;
+}
+
+.task-item-more,
+.task-item-delete {
+  right: 10px;
+}
+
+.task-item-delete:active,
+.task-item:checked ~ .task-item-delete,
+.task-item-text:focus ~ .task-item-delete {
+  display: block;
+}
+
+.task-item:checked ~ .task-item-more,
+.task-item-text:focus ~ .task-item-more {
+  display: none;
+}
+
+.task-item:checked ~ .task-item-text {
+  text-decoration: line-through;
+}
+
+.task-item:focus ~ .task-item-text {
+  background-color: #ecebb8;
+}
+
+.tasklist-btn {
+  width: 100%;
+  padding: 10px 20px;
+  text-align: center;
+  color: #666;
+  background-color: #f5f4f6;
+  border: none;
+}
